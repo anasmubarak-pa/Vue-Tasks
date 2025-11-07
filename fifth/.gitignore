@@ -15,7 +15,6 @@ coverage
 *.local
 
 # Editor directories and files
-.env
 .vscode/*
 !.vscode/extensions.json
 .idea
@@ -24,6 +23,7 @@ coverage
 *.njsproj
 *.sln
 *.sw?
+.env
 
 *.tsbuildinfo
 
