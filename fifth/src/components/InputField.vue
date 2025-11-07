@@ -4,7 +4,7 @@ import Button from "primevue/button"
 import InputText from 'primevue/inputtext';
 import { ref } from 'vue'
 
-const KEY  = import.meta.env.VITE_API_KEY
+const KEY  = import.meta.env.VITE_VAL
 const inputLocation = ref('')
 const weather = ref('load')
 const weatherC = ref(0)
