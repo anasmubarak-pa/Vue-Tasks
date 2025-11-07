@@ -1,6 +1,7 @@
 <script setup>
 import InputField from './components/InputField.vue'
 import { ref } from 'vue'
+
 const weather = ref('load')
 const weatherC = ref(0)
 const day = ref('')

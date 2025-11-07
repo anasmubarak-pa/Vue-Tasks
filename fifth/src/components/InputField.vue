@@ -1,10 +1,10 @@
 <script setup>
-import { label } from "@primeuix/themes/aura/metergroup";
 import ProgressSpinner from 'primevue/progressspinner';
 import Button from "primevue/button"
 import InputText from 'primevue/inputtext';
 import { ref } from 'vue'
 
+const KEY  = import.meta.env.VITE_API_KEY
 const inputLocation = ref('')
 const weather = ref('load')
 const weatherC = ref(0)
@@ -23,7 +23,7 @@ const changeLocation = ()=>{
   }
   async function fetchWeather() {
   try {
-    let response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${inputLocation.value.replaceAll(' ','%20')}?key=HFEQ6WGA43LH34ZW3G9WZTBJV`)
+    let response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${inputLocation.value.replaceAll(' ','%20')}?key=${KEY}`)
     if(response.ok)
     {
         response = await response.json()
