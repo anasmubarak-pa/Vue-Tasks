@@ -6,8 +6,7 @@ const weather = ref('load')
 const weatherC = ref(0)
 const day = ref('')
 const getbg = (weather)=>{
-  let url = new URL('./assets/video/',import.meta.url).href
-  return `${url}/${weather}.mp4`
+  return `/video/${weather}.mp4`
 }
 const ackUpdates = (w,wc,d)=>{
   weather.value = w
