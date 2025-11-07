@@ -27,7 +27,7 @@ const changeLocation = ()=>{
     if(response.ok)
     {
         response = await response.json()
-        console.log(response.currentConditions)  
+        // console.log(response.currentConditions)  
         weatherC.value = Math.round((response.currentConditions.temp-32)*5/9)
         getWeather(response.currentConditions.icon)
         loading.value = false
